@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,43 +16,23 @@
     <Button
         android:id="@+id/btn_agendarEvento"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:onClick="onClickAgendarEvento"
-        android:text="Agendar Evento" />
+        android:text="Agendar Evento"
+        android:textSize="14sp"
+        app:icon="@android:drawable/btn_star" />
 
     <Button
         android:id="@+id/btnLocal"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:onClick="onClickLocais"
-        android:text="Locais" />
-
-    <TextView
-        android:id="@+id/textView_buscarNomeEvento"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Buscar por nome do evento: " />
+        android:onClick="onClickLocais"
+        android:text="Cadastrar Locais"
+        app:icon="@android:drawable/ic_menu_myplaces" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/editText_buscarNomeEvento"
-            android:layout_width="300dp"
-            android:layout_height="44dp"
-            android:ems="10"
-            android:inputType="textPersonName" />
-
-        <Button
-            android:id="@+id/btn_buscarNomeEvento"
-            android:layout_width="111dp"
-            android:layout_height="40dp"
-            android:onClick="onClickBuscarNome"
-            android:text="Buscar"
-            android:textSize="14sp" />
-
-    </LinearLayout>
+        android:layout_height="wrap_content" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -61,26 +42,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/btn_crescente"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_weight="1"
-                android:onClick="onClickCrescente"
-                android:text="Crescente"
-                android:textSize="7sp" />
-
-            <Button
-                android:id="@+id/btn_descrecente"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_weight="1"
-                android:onClick="onClickDecrescente"
-                android:text="Decrescente"
-                android:textSize="7sp" />
-        </LinearLayout>
+            android:orientation="horizontal" />
     </LinearLayout>
 
     <LinearLayout
@@ -91,34 +53,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView4_buscarNomeCidade"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=" Buscar por nome da cidade:" />
-
-    </LinearLayout>
+        android:orientation="horizontal" />
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/editText_buscarNomeCidade"
-            android:layout_width="300dp"
-            android:layout_height="44dp"
-            android:ems="10"
-            android:inputType="textPersonName" />
-
-        <Button
-            android:id="@+id/btn_buscarCidade"
-            android:layout_width="110dp"
-            android:layout_height="40dp"
-            android:onClick="onClickBuscarCidade"
-            android:text="Buscar" />
-
-    </LinearLayout>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

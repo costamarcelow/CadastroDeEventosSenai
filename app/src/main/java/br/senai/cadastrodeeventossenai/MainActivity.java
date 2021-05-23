@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -57,72 +56,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, CadastrarEventoActivity.class);
         startActivity(intent);
     }
-
-    public void onClickLocais(View v) {
-        Intent intent = new Intent(MainActivity.this, ListarLocalActivity.class);
-        startActivity(intent);
-        finish();
-    }
-
-    public void onClickCrescente(View v) {
-        EditText textoBuscaNome = findViewById(R.id.editText_buscarNomeEvento);
-        String palavra = textoBuscaNome.getText().toString();
-        int opcao = 2;
-
-        EventoDAO eventoDAO = new EventoDAO(getBaseContext());
-
-        adapterEventos = new ArrayAdapter<>(MainActivity.this,
-                android.R.layout.simple_list_item_1,
-                eventoDAO.listarPesquisa(opcao, palavra));
-        listaDeEventos.setAdapter(adapterEventos);
-
-    }
-
-    public void onClickDecrescente(View v) {
-        EditText textoBuscaNome = findViewById(R.id.editText_buscarNomeEvento);
-        String palavra = textoBuscaNome.getText().toString();
-        int opcao = 1;
-
-        EventoDAO eventoDAO = new EventoDAO(getBaseContext());
-
-        adapterEventos = new ArrayAdapter<>(MainActivity.this,
-                android.R.layout.simple_list_item_1,
-                eventoDAO.listarPesquisa(opcao, palavra));
-        listaDeEventos.setAdapter(adapterEventos);
-    }
-
-    public void onClickBuscarNome(View v) {
-        EditText textoBuscaNome = findViewById(R.id.editText_buscarNomeEvento);
-        String palavra = textoBuscaNome.getText().toString();
-        int opcao = 2;
-
-        EventoDAO eventoDAO = new EventoDAO(getBaseContext());
-
-        adapterEventos = new ArrayAdapter<>(MainActivity.this,
-                android.R.layout.simple_list_item_1,
-                eventoDAO.listarPesquisa(opcao, palavra));
-        listaDeEventos.setAdapter(adapterEventos);
-
-    }
-
-
-    public void onClickBuscarCidade(View v) {
-        EditText textoBuscaNome = findViewById(R.id.editText_buscarNomeEvento);
-        String palavra = textoBuscaNome.getText().toString();
-
-        EditText textoBuscaCidade = findViewById(R.id.editText_buscarNomeCidade);
-        String palavraCidade = textoBuscaCidade.getText().toString();
-        int opcao = 2;
-
-        EventoDAO eventoDAO = new EventoDAO(getBaseContext());
-
-        adapterEventos = new ArrayAdapter<>(MainActivity.this,
-                android.R.layout.simple_list_item_1,
-                eventoDAO.listarPesquisaCidade(opcao, palavra, palavraCidade));
-        listaDeEventos.setAdapter(adapterEventos);
-
-
-    }
-
 
 }

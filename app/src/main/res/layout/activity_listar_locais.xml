@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -7,19 +8,23 @@
     <ListView
         android:id="@+id/ListView_locais"
         android:layout_width="match_parent"
-        android:layout_height="400dp" />
+        android:layout_height="313dp" />
 
     <Button
         android:id="@+id/btnNovoLocal"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:onClick="onClickCadastrarLocal"
-        android:text="Novo Local" />
+        android:text="Novo Local"
+        android:textSize="14sp"
+        app:icon="@android:drawable/ic_menu_myplaces" />
 
     <Button
         android:id="@+id/btnEventos"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:onClick="onClickEventos"
-        android:text="Eventos" />
+        android:text="Eventos"
+        android:textSize="14sp"
+        app:icon="@android:drawable/btn_star" />
 </LinearLayout>
